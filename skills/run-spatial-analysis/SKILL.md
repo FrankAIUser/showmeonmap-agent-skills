@@ -22,8 +22,19 @@ statistics yourself from feature lists and present them as analysis results.
 | "Is X related to Y across regions?" | `correlate_layers` | two region layers |
 | "Show X and Y together on one map" | `add_fusion_layer` | two region layers (bivariate) |
 
-Build the input layers first with `build_map` / `add_layer`, then call
-`get_state` (free) to get the exact layer ids.
+Build the input layers first with `build_map` / `add_layer`. Layer ids are in
+the envelope; call `get_state` (free) only if you've lost track of them.
+
+## Give it enough data
+
+A cluster test on a handful of points says little. Check the input count (the
+envelope's insight headline, or `query_features`) before running `hotspot`:
+
+- If the build applied a default threshold that left few features (e.g. M4.5+
+  earthquakes), rebuild with an explicit lower threshold in the query **before**
+  the analysis — ask the user first, it costs a credit.
+- With fewer than about 30 input features, run it only if the user still wants
+  it, and say the result rests on few events.
 
 ## Read the result
 
@@ -31,10 +42,17 @@ The reply carries a `memo` and `stats` computed by the server, a
 `resultLayerId`, and a `contextAnswer`. Use only those numbers in your answer
 (see `grounded-map-answers`).
 
+To say **where** the result is (which cells are hot, which zone is top), call
+`query_features` on `resultLayerId` — e.g. `{op:'eq', field:'hotspotClass',
+value:'hot-99'}` — and describe locations per `grounded-map-answers` (data
+names or coordinates, not region names from memory).
+
 Know what each method does and doesn't claim:
 
 - `hotspot` classes are 99 / 95 / 90 % significance, FDR-corrected. "No
   significant clustering" is a valid finding.
+- In density mode (no `valueField`) the test runs on hex cells: `stats.n`
+  counts **cells**, not input features. Report the input count separately.
 - `zonal` keeps **zero** and **no data** as different classes. Don't call an
   empty-data zone "zero".
 - `enrich` leaves unmatched features null — never zero. US only.

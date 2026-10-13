@@ -1,0 +1,70 @@
+{
+  "version": "0.1.0",
+  "mcp": {
+    "name": "showmeonmap",
+    "url": "https://showmeonmap.com/api/mcp",
+    "transport": "http"
+  },
+  "skills": [
+    {
+      "name": "connect-showmeonmap",
+      "layer": "setup",
+      "path": "skills/connect-showmeonmap/SKILL.md",
+      "triggers": ["connect showmeonmap", "install the map tools", "build_map not found", "sign in", "out of credits"]
+    },
+    {
+      "name": "build-and-refine-a-map",
+      "layer": "core",
+      "path": "skills/build-and-refine-a-map/SKILL.md",
+      "triggers": ["map", "show me on a map", "where are", "filter the map", "zoom to", "change the basemap", "remove that layer"]
+    },
+    {
+      "name": "grounded-map-answers",
+      "layer": "core",
+      "path": "skills/grounded-map-answers/SKILL.md",
+      "triggers": ["what does the map show", "summarise the map", "how many", "which is highest"]
+    },
+    {
+      "name": "run-spatial-analysis",
+      "layer": "core",
+      "path": "skills/run-spatial-analysis/SKILL.md",
+      "triggers": ["hot spot", "cluster", "per district", "per hexagon", "income", "census", "nearest", "within", "dissolve", "merge layers"]
+    },
+    {
+      "name": "recurring-map-workflows",
+      "layer": "core",
+      "path": "skills/recurring-map-workflows/SKILL.md",
+      "triggers": ["every week", "every month", "for each", "save this as a template", "run it again", "same map for"]
+    },
+    {
+      "name": "share-and-export",
+      "layer": "core",
+      "path": "skills/share-and-export/SKILL.md",
+      "triggers": ["share", "link", "png", "pdf", "download", "geojson", "csv", "export"]
+    },
+    {
+      "name": "hazard-watch",
+      "layer": "recipe",
+      "path": "skills/hazard-watch/SKILL.md",
+      "triggers": ["earthquakes", "wildfires", "fires", "volcano", "hurricane", "typhoon", "flood", "near me", "this week"]
+    },
+    {
+      "name": "compare-regions",
+      "layer": "recipe",
+      "path": "skills/compare-regions/SKILL.md",
+      "triggers": ["by country", "by state", "across europe", "per capita", "compare", "vs", "correlation"]
+    },
+    {
+      "name": "neighbourhood-profile",
+      "layer": "recipe",
+      "path": "skills/neighbourhood-profile/SKILL.md",
+      "triggers": ["around", "near", "neighbourhood", "within walking distance", "who lives", "schools near", "hospitals near"]
+    },
+    {
+      "name": "network-and-transit",
+      "layer": "recipe",
+      "path": "skills/network-and-transit/SKILL.md",
+      "triggers": ["railway", "metro", "subway", "transit lines", "power plants", "power grid", "highways"]
+    }
+  ]
+}

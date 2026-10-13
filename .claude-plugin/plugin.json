@@ -1,0 +1,9 @@
+{
+  "name": "showmeonmap",
+  "version": "0.1.0",
+  "description": "Make cited, data-driven maps with the ShowMeOnMap MCP server: hazards, regional statistics, transit, parks and spatial analysis.",
+  "author": { "name": "ShowMeOnMap", "url": "https://showmeonmap.com" },
+  "homepage": "https://showmeonmap.com/developers",
+  "license": "MIT",
+  "keywords": ["maps", "gis", "geospatial", "cartography", "mcp"]
+}

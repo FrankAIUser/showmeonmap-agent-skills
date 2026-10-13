@@ -1,0 +1,11 @@
+{
+  "name": "showmeonmap",
+  "owner": { "name": "ShowMeOnMap", "url": "https://showmeonmap.com" },
+  "plugins": [
+    {
+      "name": "showmeonmap",
+      "source": "./",
+      "description": "Skills + MCP connector for making cited, data-driven maps."
+    }
+  ]
+}

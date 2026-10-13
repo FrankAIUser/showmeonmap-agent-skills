@@ -1,6 +1,10 @@
 {
   "name": "showmeonmap",
-  "owner": { "name": "ShowMeOnMap", "url": "https://showmeonmap.com" },
+  "description": "ShowMeOnMap skills and MCP connector for making cited, data-driven maps.",
+  "owner": {
+    "name": "ShowMeOnMap",
+    "url": "https://showmeonmap.com"
+  },
   "plugins": [
     {
       "name": "showmeonmap",
